@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .button {
+    background-color: darkcyan;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    color-interpolation-filters:linearRGB;
+    }
+
+    .jumbotron {
+        background-color: whitesmoke;
+        position: center;
+        color: black;
+        display: block;
+        @sddsg
+        
+    }
+</style> 
+
+<div style="padding-top:50px">
+
+
+
+    <form asp-action = "DeserializeJson" method="post">
+        <center>
+            ENTER URL : &nbsp
+            <input type="text" name="url" size="70" />
+            &nbsp &nbsp
+
+            <br />
+            <br />
+            
+            <input class="button" type="submit" value="SUBMIT" />
+
+            <br />
+            <br />
+        </center>
+    </form>
+</div>
+
+<div class="jumbotron">
+    @if (ViewBag.Value != null)
+    {
+        <center><h3> Price is @ViewBag.Value </h3></center>
+    }
+</div>
